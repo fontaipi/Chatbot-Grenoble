@@ -1,3 +1,5 @@
+## Type d'entrée que le Chatbot reconnais
+## Dans le fichier nlu.md on liste ce que l'utilisateur peut écrire dans chaque intent
 intents:
   - greet
   - bye
@@ -5,12 +7,16 @@ intents:
   - happy
   - faq
 
+## Utile pour le formulaire
+## Cela correspond aux différents champs qu'il faut sauvegarder
 entities:
   - name
   - email
   - phone
   - message
 
+## Utile pour le formulaire
+## On ajoute des informations supplémentaire pour les champs
 slots:
   name:
     type: unfeaturized
@@ -25,6 +31,7 @@ slots:
     type: unfeaturized
     auto_fill: false
 
+## Liste des réponses que le Chatbot connais
 responses:
   utter_noworries:
     - text: Mais de rien !
