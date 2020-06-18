@@ -1,11 +1,12 @@
 ## Type d'entrée que le Chatbot reconnais
 ## Dans le fichier nlu.md on liste ce que l'utilisateur peut écrire dans chaque intent
 intents:
-  - greet
+  - greet: {triggers: action_greet}
   - bye
   - thank
   - happy
   - faq
+  - out_of_scope
 
 ## Utile pour le formulaire
 ## Cela correspond aux différents champs qu'il faut sauvegarder
@@ -65,3 +66,4 @@ forms:
 
 actions:
   - respond_faq
+  - action_greet

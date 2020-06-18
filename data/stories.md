@@ -1,13 +1,4 @@
-## greet + happy
-* greet
-  - utter_greet
-* happy 
-  - utter_happy
-* faq 
-  - respond_faq
-* bye 
-  - utter_bye
-  
+ 
 ## happy
 * happy
   - utter_happy
@@ -24,12 +15,17 @@
 * faq
   - respond_faq
   
-## happy contact path
-* greet
-    - utter_greet
+## contact
 * request_contact
     - contact_form
     - form{"name": "contact_form"}
     - utter_slots_values
-* thank
-    - utter_noworries
+    
+## contact, continue
+* request_contact
+    - contact_form
+    - form{"name": "contact_form"}
+* faq
+    - respond_faq
+    - contact_form
+    - form{"name": null}
