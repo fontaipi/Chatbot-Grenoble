@@ -1,0 +1,60 @@
+intents:
+  - greet
+  - bye
+  - thank
+  - happy
+  - faq
+
+entities:
+  - name
+  - email
+  - phone
+  - message
+
+slots:
+  name:
+    type: unfeaturized
+    auto_fill: false
+  email:
+    type: unfeaturized
+    auto_fill: false
+  phone:
+    type: unfeaturized
+    auto_fill: false*
+  message:
+    type: unfeaturized
+    auto_fill: false
+
+responses:
+  utter_noworries:
+    - text: Mais de rien !
+  utter_greet:
+    - text: Bien le bonjour, comment allez vous?
+  utter_happy:
+    - text: Merveilleux, continuez comme ça !
+  utter_bye:
+    - text: A bientôt
+  utter_ask_name:
+    - text: Quel est votre nom ?
+  💸utter_ask_email:
+    - text: Quel est votre email ?
+  utter_ask_phone:
+    - text: Quel est votre numéro de téléphone ?
+  utter_ask_massge:
+    - text: Veuillez saisir votre message
+  utter_submit:
+    - text: Votre message a été enregistré
+  utter_wrong_phone:
+    - text: Veuillez saisir un numéro de téléphone valide
+  utter_slots_values:
+    - text: "Je vais envoyer un message avec les paramètres suivants:\n
+               - Nom: {name}\n
+               - Email: {email}\n
+               - Téléphone: {phone}\n
+               - Message: {message}"
+
+forms:
+  - contact_form
+
+actions:
+  - respond_faq
